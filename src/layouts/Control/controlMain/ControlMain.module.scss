@@ -1,0 +1,119 @@
+.main {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 15px 50px 12px 50px;
+    & .action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40rem;
+        & .btn {
+            margin: 0 10px;
+            & i {
+                font-size: 1.6rem;
+            }
+        }
+        .btn-play {
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            &:hover i {
+                color: var(--link-text-hover);
+            }
+            & i {
+                font-size: 4rem;
+            }
+        }
+        .shuffle {
+            & i {
+                color: var(--link-text-hover);
+            }
+        }
+        .icon-load {
+            border: 1px solid var(--text-primary) !important;
+        }
+    }
+    & .time {
+        display: flex;
+        align-items: center;
+        & p {
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+        & .start {
+            color: var(--text-secondary);
+        }
+        & .end {
+            color: var(--text-primary);
+        }
+        .duration {
+            width: 100%;
+            position: relative;
+            width: 100%;
+            height: 3px;
+            background-color: hsla(0, 0%, 100%, 0.3);
+            border-radius: 999px;
+            &:hover {
+                height: 5px;
+            }
+
+            .duration-play {
+                position: absolute;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                border-radius: 999px;
+                background-color: var(--purple-primary);
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -5px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 999px;
+                    background-color: var(--purple-primary);
+                    display: none;
+                }
+            }
+            &:hover .duration-play::after {
+                display: block;
+            }
+        }
+    }
+}
+.active-lyric {
+    margin: auto;
+}
+
+@media (max-width: 740px) {
+    .main {
+        padding: 0;
+        .action {
+            & .btn {
+                margin: 0 5px;
+            }
+        }
+    }
+    .active-lyric {
+        .btn-play,
+        .shuffle,
+        .icon-load,
+        .btn {
+            & span {
+                & i {
+                    color: #fff !important;
+                }
+            }
+        }
+        .time {
+            .end,
+            .start {
+                color: #fff;
+            }
+        }
+    }
+}
