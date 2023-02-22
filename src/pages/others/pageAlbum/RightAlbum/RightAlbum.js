@@ -85,12 +85,12 @@ function RightAlbum({ data }) {
     };
     return (
         <div className={cx('right') + ' l-8 m-8'}>
-            {data?.description && (
+            {/* {data?.description && (
                 <div className={cx('description')}>
                     <span>Lời tựa</span>
                     <span>{data?.description}</span>
                 </div>
-            )}
+            )} */}
             {!data.sections ? (
                 <>
                     <div className={cx('header')}>
