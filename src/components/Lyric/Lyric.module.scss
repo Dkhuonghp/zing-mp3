@@ -85,11 +85,9 @@
                     }
                     .active {
                         color: var(--link-text-hover) !important;
-                        transition: 0.1s linear;
                     }
                     .is-over {
-                        color: var(--text-secondary);
-                        transition: 0.1s linear;
+                        color: hsla(0, 0%, 100%, 0.2);
                     }
                 }
                 .s {

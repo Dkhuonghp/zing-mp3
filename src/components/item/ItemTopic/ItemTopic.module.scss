@@ -25,6 +25,7 @@
         height: 100%;
         background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5) 85%);
         padding: 0 0 15px 15px;
+        cursor: pointer;
         & h3 {
             font-size: 1.8rem;
             color: var(--text-primary);
