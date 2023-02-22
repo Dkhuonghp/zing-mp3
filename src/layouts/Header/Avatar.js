@@ -6,16 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import TippyMenu from '~/components/menu/tippyMenu/TippyMenu';
 const MENU_LOGOUT = [
     {
-        id: 0,
-        title: 'Nâng cấp VIP',
-        iconLeft: <Icon.IconVip />,
-    },
-    {
-        id: 1,
-        title: 'Mua code VIP',
-        iconLeft: <i className="icon ic-20-quaility-SQ"></i>,
-    },
-    {
         id: 1,
         title: 'Đăng xuất',
         iconLeft: <i className="icon ic-log-out"></i>,

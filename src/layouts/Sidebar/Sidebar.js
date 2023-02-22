@@ -155,10 +155,6 @@ function Sidebar() {
                     </div>
                 ) : (
                     <>
-                        <div className={cx('zing-vip') + ' m-0'}>
-                            <span className={cx('zing-vip-title')}>Nghe nhạc không quảng cáo cùng kho nhạc VIP</span>
-                            <button className={cx('btn', 'btn-lever')}>NÂNG CẤP VIP</button>
-                        </div>
                         <ul className={cx('library-list')}>
                             <li className={(cx('library-item'), ' m-0')}>
                                 <h1 className={cx('library-title')}>Thư viện</h1>

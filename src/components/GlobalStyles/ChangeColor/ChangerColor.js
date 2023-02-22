@@ -6,7 +6,7 @@ const ChangerColor = ({ children }) => {
     const b = useSelector((state) => state.action.booleanPreviewBgr);
     var kq;
     b ? (kq = p) : (kq = t);
-    if ([0, 1, 2, 8].includes(kq)) {
+    if ([0, 1, 2, 8, 9, 10, 11, 12, 13, 14, 15, 16].includes(kq)) {
         document.documentElement.style.setProperty('--navigation-text', '#dadada');
         document.documentElement.style.setProperty('--text-secondary', 'hsla(0, 0%, 100%, 0.5)');
         document.documentElement.style.setProperty('--text-primary', '#fff');
@@ -61,6 +61,110 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--player-bg', '#4C473E');
             document.documentElement.style.setProperty('--primary-bg', '#605C52');
             document.documentElement.style.setProperty('--purple-primary', '#D08011');
+            document.documentElement.style.setProperty('--link-text-hover', '#F59D22');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');
+            document.documentElement.style.setProperty(
+                '--linear-gradient-bg',
+                'linear-gradient(to bottom, #656156, #574f40)',
+            );
+        }
+        if (kq === 9) {
+            document.documentElement.style.setProperty('--layout-bg', '#767269');
+            document.documentElement.style.setProperty('--player-bg', '#4C473E');
+            document.documentElement.style.setProperty('--primary-bg', '#333');
+            document.documentElement.style.setProperty('--purple-primary', '#D08011');
+            document.documentElement.style.setProperty('--link-text-hover', '#F59D22');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');
+            document.documentElement.style.setProperty(
+                '--linear-gradient-bg',
+                'linear-gradient(to bottom, #656156, #574f40)',
+            );
+        }
+        if (kq === 10) {
+            document.documentElement.style.setProperty('--layout-bg', '#767269');
+            document.documentElement.style.setProperty('--player-bg', '#4C473E');
+            document.documentElement.style.setProperty('--primary-bg', '#34224f');
+            document.documentElement.style.setProperty('--purple-primary', '#D08011');
+            document.documentElement.style.setProperty('--link-text-hover', '#F59D22');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');
+            document.documentElement.style.setProperty(
+                '--linear-gradient-bg',
+                'linear-gradient(to bottom, #656156, #574f40)',
+            );
+        }
+        if (kq === 11) {
+            document.documentElement.style.setProperty('--layout-bg', '#767269');
+            document.documentElement.style.setProperty('--player-bg', '#4C473E');
+            document.documentElement.style.setProperty('--primary-bg', '#173b45');
+            document.documentElement.style.setProperty('--purple-primary', '#F59D22');
+            document.documentElement.style.setProperty('--link-text-hover', '#F59D22');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');
+            document.documentElement.style.setProperty(
+                '--linear-gradient-bg',
+                'linear-gradient(to bottom, #656156, #574f40)',
+            );
+        }
+        if (kq === 12) {
+            document.documentElement.style.setProperty('--layout-bg', '#767269');
+            document.documentElement.style.setProperty('--player-bg', '#4C473E');
+            document.documentElement.style.setProperty('--primary-bg', '#203d65');
+            document.documentElement.style.setProperty('--purple-primary', '#F59D22');
+            document.documentElement.style.setProperty('--link-text-hover', '#F59D22');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');
+            document.documentElement.style.setProperty(
+                '--linear-gradient-bg',
+                'linear-gradient(to bottom, #656156, #574f40)',
+            );
+        }
+        if (kq === 13) {
+            document.documentElement.style.setProperty('--layout-bg', '#767269');
+            document.documentElement.style.setProperty('--player-bg', '#4C473E');
+            document.documentElement.style.setProperty('--primary-bg', '#204b3d');
+            document.documentElement.style.setProperty('--purple-primary', '#F59D22');
+            document.documentElement.style.setProperty('--link-text-hover', '#F59D22');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');
+            document.documentElement.style.setProperty(
+                '--linear-gradient-bg',
+                'linear-gradient(to bottom, #656156, #574f40)',
+            );
+        }
+        if (kq === 14) {
+            document.documentElement.style.setProperty('--layout-bg', '#767269');
+            document.documentElement.style.setProperty('--player-bg', '#4C473E');
+            document.documentElement.style.setProperty('--primary-bg', '#46312b');
+            document.documentElement.style.setProperty('--purple-primary', '#F59D22');
+            document.documentElement.style.setProperty('--link-text-hover', '#F59D22');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');
+            document.documentElement.style.setProperty(
+                '--linear-gradient-bg',
+                'linear-gradient(to bottom, #656156, #574f40)',
+            );
+        }
+        if (kq === 15) {
+            document.documentElement.style.setProperty('--layout-bg', '#767269');
+            document.documentElement.style.setProperty('--player-bg', '#4C473E');
+            document.documentElement.style.setProperty('--primary-bg', '#642654');
+            document.documentElement.style.setProperty('--purple-primary', '#F59D22');
+            document.documentElement.style.setProperty('--link-text-hover', '#F59D22');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');
+            document.documentElement.style.setProperty(
+                '--linear-gradient-bg',
+                'linear-gradient(to bottom, #656156, #574f40)',
+            );
+        }
+        if (kq === 16) {
+            document.documentElement.style.setProperty('--layout-bg', '#767269');
+            document.documentElement.style.setProperty('--player-bg', '#4C473E');
+            document.documentElement.style.setProperty('--primary-bg', '#522325');
+            document.documentElement.style.setProperty('--purple-primary', '#F59D22');
             document.documentElement.style.setProperty('--link-text-hover', '#F59D22');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');

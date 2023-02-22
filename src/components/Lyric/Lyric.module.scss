@@ -22,7 +22,6 @@
                 font-size: 3rem;
                 color: var(--text-primary);
                 font-weight: 700px;
-                text-shadow: var(--link-text-hover) 1px 0 10px;
             }
             .action {
                 display: flex;
@@ -86,11 +85,11 @@
                     }
                     .active {
                         color: var(--link-text-hover) !important;
-                        transition: 0.3s linear;
+                        transition: 0.1s linear;
                     }
                     .is-over {
                         color: var(--text-secondary);
-                        transition: 0.3s linear;
+                        transition: 0.1s linear;
                     }
                 }
                 .s {

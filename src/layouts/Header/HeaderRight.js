@@ -65,8 +65,6 @@ function HeaderRight() {
                 content="Chủ đề"
                 onClick={() => dispatch(zingAction.actions.modalTheme(true))}
             />
-            {/* ------ vip ------ */}
-            <Button disable iconLeft={<Icon.IconVip />} content="Nâng cấp VIP" />
             {/* ------ tải file ------*/}
             <Button primary type={<Icon.upload />} content="Tải lên" />
             {/* ------ setting ------*/}

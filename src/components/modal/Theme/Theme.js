@@ -66,6 +66,51 @@ const themesModal = {
             },
         ],
     },
+    color: {
+        names: 'Màu Tối',
+        data: [
+            {
+                id:9,
+                title: 'Tối',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/dark.jpg',
+            },
+            {
+                id:10,
+                title: 'Tím',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/purple.jpg',
+            },
+            {
+                id:11,
+                title: 'Xanh Đậm',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/blue.jpg',
+            },
+            {
+                id:12,
+                title: 'Xanh Biển',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/blue-light.jpg',
+            },
+            {
+                id:13,
+                title: 'Xanh Lá',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/green.jpg',
+            },
+            {
+                id:14,
+                title: 'Nâu',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/brown.jpg',
+            },
+            {
+                id:15,
+                title: 'Hồng',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/pink.jpg',
+            },
+            {
+                id:16,
+                title: 'Đỏ',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/red.jpg',
+            },
+        ],
+    } 
 };
 
 function Theme() {
@@ -93,6 +138,7 @@ function Theme() {
                     <ThemeContainer data={themesModal.Dynamic} />
                     <ThemeContainer data={themesModal.topic} />
                     <ThemeContainer data={themesModal.artist} />
+                    <ThemeContainer data={themesModal.color} />
                 </div>
             </div>
         </div>

@@ -55,28 +55,32 @@ function ModalLogin() {
             <ModalWrapper>
                 <div className={cx('login')}>
                     <div className={cx('background')}>
-                        <Swiper
-                            effect={'fade'}
-                            modules={[EffectFade, Navigation, Pagination, Autoplay]}
-                            autoplay={{
-                                delay: 2000,
-                                disableOnInteraction: false,
-                            }}
-                            className="mySwiper"
-                            loop={true}
-                            speed={1000}
-                        >
-                        </Swiper>
+                        
+                        <div className={cx('content')} onClick={handleUser}>
+                            <img
+                                src="https://img-new.cgtrader.com/items/2590270/190c8c862e/google-logo-v1-001-3d-model-low-poly-max-obj-3ds-fbx-ma-stl.jpg"
+                                alt=""
+                            />
+                            <h3>Đăng nhập bằng google</h3>
+                        </div>
+                        <div className={cx('content')}>
+                            <img
+                                src="https://inkythuatso.com/uploads/thumbnails/800/2021/09/zalo-logo-inkythuatso-14-15-05-01.jpg"
+                                alt=""
+                            />
+                            <h3>Đăng nhập bằng zalo</h3>
+                        </div>
+                        <div className={cx('content')}>
+                            <img
+                                src="https://seeklogo.com//images/F/facebook-logo-966BBFBC34-seeklogo.com.png"
+                                alt=""
+                            />
+                            <h3>Đăng nhập bằng facebook</h3>
+                        </div>
                     </div>
-                    <div className={cx('content')} onClick={handleUser}>
-                        <img
-                            src="https://img-new.cgtrader.com/items/2590270/190c8c862e/google-logo-v1-001-3d-model-low-poly-max-obj-3ds-fbx-ma-stl.jpg"
-                            alt=""
-                        />
-                        <h3>Đăng nhập bằng google</h3>
-                    </div>
+                    
 
-                    <div
+                    {/* <div
                         className={cx('user-test')}
                         onClick={() => {
                             dispatch(
@@ -92,7 +96,7 @@ function ModalLogin() {
                         }}
                     >
                         Click vào đây để dùng thử
-                    </div>
+                    </div> */}
                     <div
                         className={cx('close')}
                         onClick={() => {

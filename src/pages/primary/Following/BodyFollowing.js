@@ -51,11 +51,6 @@ function BodyFollowing() {
                     <ItemFollowing data={e} key={uuidv4()}></ItemFollowing>
                 ))}
             </Container>
-            {hideBtn && (
-                <div className={cx('btn')}>
-                    <Loading image={iconLoad[1].path} className={cx('load-img')} />
-                </div>
-            )}
         </div>
     ) : (
         <Loading />

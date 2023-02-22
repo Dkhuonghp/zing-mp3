@@ -57,11 +57,6 @@ function MvBody() {
         <div className={cx('body')}>
             <KindMusic />
             <ContainerVideos data={data} index={data?.length} />
-            {hideBtn && (
-                <div className={cx('btn')}>
-                    <Loading image={iconLoad[1]?.path} className={cx('load-img')} />
-                </div>
-            )}
         </div>
     ) : (
         <Loading />
