@@ -97,8 +97,8 @@
     }
     .scroll {
         & .body {
-            flex-wrap: nowrap;
-            overflow-x: scroll;
+            // flex-wrap: nowrap;
+            // overflow-x: scroll;
             &::-webkit-scrollbar {
                 display: none;
             }
