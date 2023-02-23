@@ -154,3 +154,17 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column-reverse;
+        .right {
+
+            img {
+                width: 100% !important;
+                height: auto !important;
+                border-radius: 10px !important;
+            }
+        }
+    }
+}
