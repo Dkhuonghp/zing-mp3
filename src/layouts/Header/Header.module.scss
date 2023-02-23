@@ -28,7 +28,9 @@
     }
 }
 .scroll.wrapper {
-    background-color: var(--layout-bg);
+    background-color: var(--layout-header-bg);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
     box-shadow: 0 3px 5px var(--sticky-header-box-shadow);
 }
 

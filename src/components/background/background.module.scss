@@ -7,10 +7,11 @@
     background-size: cover;
     background-size: 1920px auto;
     z-index: -1;
+    background-color: var(--layout-bg);
 }
 @media (max-width: 740px) {
     .background {
-        background-color: var(--player-bg);
+        background-color: var(--layout-bg);
     }
 }
 @media (min-width: 2130px) {

@@ -13,7 +13,7 @@ body .header {
 
     .select-menu {
         display: flex;
-        overflow: scroll;
+        overflow: auto;
         .btn {
             font-size: 1.4rem;
             border: none;
