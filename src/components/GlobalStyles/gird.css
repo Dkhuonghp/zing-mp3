@@ -13,8 +13,8 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -14px;
-    margin-right: -14px;
+    /* margin-left: -14px;
+    margin-right: -14px; */
 }
 
 @media (max-width: 740px) {
@@ -23,8 +23,7 @@
         margin-right: 0;
     }
     .col {
-        padding-left: 4px;
-        padding-right: 4px;
+        padding: 4px;
     }
 
     .row.no-gutters .col {
