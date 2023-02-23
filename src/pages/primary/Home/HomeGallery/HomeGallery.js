@@ -3,6 +3,8 @@ import className from 'classnames/bind';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import Button from '~/components/Button';
+import ButtonAction from '~/components/Button/ButtonAction';
 import style from './HomeGallery.module.scss';
 const cx = className.bind(style);
 
@@ -40,7 +42,7 @@ function HomeGallery({ data }) {
                     numberIndex = 0;
                 }
             };
-            interval = setInterval(() => change(), 2000);
+            interval = setInterval(() => change(), 3000);
         };
         listImg?.length > 0 && autoChange();
 
@@ -51,6 +53,12 @@ function HomeGallery({ data }) {
     return (
         <div className={cx('gallery')} style={{ height: heightImg }}>
             <div className={cx('gallery-wrapper')}>
+                <Button
+                    primary
+                    className={cx('zm-gallery-prev')}
+                    noContent
+                    iconLeft={<i className="icon ic-go-left"></i>}
+                />
                 {data?.items?.map((item, index) => (
                     <div
                         key={uuidv4()}
@@ -68,6 +76,12 @@ function HomeGallery({ data }) {
                         </Link>
                     </div>
                 ))}
+                <Button
+                    primary
+                    className={cx('zm-gallery-next')}
+                    noContent
+                    iconLeft={<i className="icon ic-go-right"></i>}
+                />
             </div>
         </div>
     );

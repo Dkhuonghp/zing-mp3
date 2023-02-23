@@ -9,7 +9,7 @@
     animation: scaleIn ease 0.3s;
     .topic {
         display: block;
-        width: 900px;
+        width: 60%;
         margin: auto;
         height: 70vh;
         position: absolute;
@@ -18,7 +18,7 @@
         transform: translate(-50%, -50%);
         padding-bottom: 20px;
         border-radius: 10px;
-        overflow: hidden;
+        overflow-y: scroll;
         background-color: var(--primary-bg);
         .topic-header {
             display: flex;
@@ -62,9 +62,15 @@
 
 @media (min-width: 740px) and (max-width: 1024px) {
     .topic {
-        width: 100% !important;
+        width: 90% !important;
         .topic-body {
             height: 100% !important;
         }
+    }
+}
+@media (max-width: 740px) {
+    .topic {
+        width: 90% !important;
+        height: 50% !important;
     }
 }

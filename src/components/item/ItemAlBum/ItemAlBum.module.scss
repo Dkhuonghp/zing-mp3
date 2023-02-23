@@ -4,6 +4,7 @@
         display: flex;
         width: 100%;
         padding: 10px;
+        cursor: pointer;
         border-radius: 4px;
         align-items: center;
         justify-content: space-between;
@@ -69,7 +70,6 @@
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 1;
-                        cursor: pointer;
                         overflow: hidden;
                     }
                 }

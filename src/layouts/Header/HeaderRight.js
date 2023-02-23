@@ -57,7 +57,7 @@ const MENU_ITEM = [
 function HeaderRight() {
     const dispatch = useDispatch();
     return (
-        <div className={cx('right') + ' l-5 c-0'}>
+        <div className={cx('right') + ' l-5'}>
             {/* ------ theme ------ */}
             <Button
                 primary
@@ -66,10 +66,10 @@ function HeaderRight() {
                 onClick={() => dispatch(zingAction.actions.modalTheme(true))}
             />
             {/* ------ tải file ------*/}
-            <Button primary type={<Icon.upload />} content="Tải lên" />
+            <Button className={cx('c-0')} primary type={<Icon.upload />} content="Tải lên" />
             {/* ------ setting ------*/}
             <TippyMenu MENU_ITEM={MENU_ITEM}>
-                <div className={cx('setting')}>
+                <div className={cx('setting') + ' c-0'}>
                     <ion-icon name="settings-outline"></ion-icon>
                 </div>
             </TippyMenu>

@@ -3,6 +3,7 @@
     width: 100%;
     .header {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         padding-bottom: 30px;
         .left {
@@ -131,7 +132,7 @@
             .menu {
                 display: flex;
                 background-color: var(--alpha-bg);
-                overflow: hidden;
+                overflow-x: scroll;
                 padding: 3px;
                 border-radius: 15px;
                 .link {

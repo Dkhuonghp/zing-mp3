@@ -748,8 +748,7 @@
 }
 .Toastify__toast-container {
     position: absolute;
-    left: 20px;
-    top: 70%;
+    top: 15px;
 }
 
 .Toastify__toast-theme--light {
@@ -771,7 +770,7 @@
     color: var(--text-primary);
 }
 .Toastify__close-button {
-    margin-top: 10px;
+    margin-top: 15px;
     color: var(--text-primary);
     width: 30px;
 }

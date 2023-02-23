@@ -2,7 +2,7 @@ import { Slide, toast } from 'react-toastify';
 
 function toastMessage(title) {
     toast(title, {
-        position: 'bottom-left',
+        position: 'top-left',
         autoClose: 2000,
         hideProgressBar: true,
         closeOnClick: true,
