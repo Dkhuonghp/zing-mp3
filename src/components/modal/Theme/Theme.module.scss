@@ -41,7 +41,6 @@
             scrollbar-width: none; /* sử dụng Firefox */
             overflow-y: scroll;
             padding: 10px 22px;
-            height: 500px;
             &::-webkit-scrollbar {
                 display: none;
             }
@@ -71,6 +70,6 @@
 @media (max-width: 740px) {
     .topic {
         width: 90% !important;
-        height: 50% !important;
+        height: 66% !important;
     }
 }
