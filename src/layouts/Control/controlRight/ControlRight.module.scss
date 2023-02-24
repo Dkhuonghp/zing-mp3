@@ -6,7 +6,7 @@
         position: relative;
         width: 70px;
         height: 3px;
-        background-color: hsla(0, 0%, 100%, 0.3);
+        background-color: var(--duration-bg);
         border-radius: 999px;
         &:hover {
             height: 5px;

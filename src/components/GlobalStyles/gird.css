@@ -747,7 +747,7 @@
 }
 .Toastify__toast-container {
     position: absolute;
-    top: 15px;
+    bottom: 24%;
 }
 
 .Toastify__toast-theme--light {

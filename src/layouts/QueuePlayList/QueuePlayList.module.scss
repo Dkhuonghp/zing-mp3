@@ -62,12 +62,6 @@
             background-color: var(--alpha-bg);
         }
         .list {
-            .is-pre {
-                opacity: 0.6;
-                &:hover {
-                    opacity: 1;
-                }
-            }
             .next {
                 padding: 10px;
                 & h3 {

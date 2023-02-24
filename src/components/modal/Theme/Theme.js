@@ -66,7 +66,7 @@ const themesModal = {
             },
         ],
     },
-    color: {
+    darkColor: {
         names: 'Màu Tối',
         data: [
             {
@@ -110,7 +110,32 @@ const themesModal = {
                 link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/red.jpg',
             },
         ],
-    } 
+    },
+    lightColor: {
+        names: 'Màu Sáng',
+        data: [
+            {
+                id: 17,
+                title: 'Sáng',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/light.jpg'
+            },
+            {
+                id: 18,
+                title: 'Xám',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/gray.jpg'
+            },
+            {
+                id: 19,
+                title: 'Xanh Nhạt',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/green-light.jpg'
+            },
+            {
+                id: 20,
+                title: 'Hồng Cánh Sen',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/pink-light.jpg'
+            },
+        ]
+    }
 };
 
 function Theme() {
@@ -138,7 +163,8 @@ function Theme() {
                     <ThemeContainer data={themesModal.Dynamic} />
                     <ThemeContainer data={themesModal.topic} />
                     <ThemeContainer data={themesModal.artist} />
-                    <ThemeContainer data={themesModal.color} />
+                    <ThemeContainer data={themesModal.darkColor} />
+                    <ThemeContainer data={themesModal.lightColor} />
                 </div>
             </div>
         </div>

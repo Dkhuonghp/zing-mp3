@@ -222,9 +222,11 @@
     .is-active,
     .active {
         background-color: var(--alpha-bg);
+        
     }
     .queue-active {
         background-color: var(--purple-primary);
+
         &:hover {
             background-color: var(--purple-primary);
         }

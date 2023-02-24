@@ -20,7 +20,7 @@
             transform: translateY(-50%);
             background-color: hsla(0, 0%, 100%, .5);
             box-shadow: 0 2px 4px 0 rgb(226 102 102 / 15%);
-            z-index: 100;
+            z-index: 80;
             opacity: 0;
         }
         .zm-gallery-next {
@@ -32,7 +32,7 @@
             transform: translateY(-50%);
             background-color: hsla(0, 0%, 100%, .5);
             box-shadow: 0 2px 4px 0 rgb(226 102 102 / 15%);
-            z-index: 100;
+            z-index: 80;
             opacity: 0;
         }
         .item-image {

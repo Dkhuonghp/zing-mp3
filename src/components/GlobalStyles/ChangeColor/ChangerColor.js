@@ -10,6 +10,8 @@ const ChangerColor = ({ children }) => {
         document.documentElement.style.setProperty('--navigation-text', '#dadada');
         document.documentElement.style.setProperty('--text-secondary', 'hsla(0, 0%, 100%, 0.5)');
         document.documentElement.style.setProperty('--text-primary', '#fff');
+        document.documentElement.style.setProperty('--player-text', '#fff');
+        document.documentElement.style.setProperty('--duration-bg', '#5a5a5a');
         document.documentElement.style.setProperty('--search-text', '#eee');
         document.documentElement.style.setProperty('--text-placeholder', '#dadada');
         document.documentElement.style.setProperty('--setting-icon-text', '#d8d8d8');
@@ -146,7 +148,7 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--layout-header-bg', 'rgba(65,22,54,0.5)');
             document.documentElement.style.setProperty('--player-bg', '#4c1a3f');
             document.documentElement.style.setProperty('--primary-bg', '#642654');
-            document.documentElement.style.setProperty('--purple-primary', '#b65f21');
+            document.documentElement.style.setProperty('--purple-primary', '#ca4974');
             document.documentElement.style.setProperty('--link-text-hover', '#e9638f');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#883c6c');
@@ -160,7 +162,7 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--purple-primary', '#ca4954');
             document.documentElement.style.setProperty('--link-text-hover', '#f2636f');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
-            document.documentElement.style.setProperty('--queue-player-popup-bg', '#7a2922');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#561111');
         }
     } else {
         document.documentElement.style.setProperty('--navigation-text', '#32323d');
@@ -235,26 +237,74 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--primary-bg', '#FFFFFF');
             document.documentElement.style.setProperty('--purple-primary', '#8D22C3');
             document.documentElement.style.setProperty('--link-text-hover', '#8D22C3');
+            document.documentElement.style.setProperty('--duration-bg', '#dedede');
             document.documentElement.style.setProperty('--text-item-hover', '#8D22C3');
             document.documentElement.style.setProperty('--player-bg', '#fff');
+            document.documentElement.style.setProperty('--player-text', '#32323d');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#fff');
         }
+        //! Sáng
+        if (kq === 17) {
+            document.documentElement.style.setProperty('--layout-bg', '#fff');
+            document.documentElement.style.setProperty('--layout-header-bg', 'hsla(0,0%,100%,0.8)');
+            document.documentElement.style.setProperty('--player-bg', '#fff');
+            document.documentElement.style.setProperty('--player-text', '#32323d');
+            document.documentElement.style.setProperty('--text-item-hover', '#8d22c3');
+            document.documentElement.style.setProperty('--duration-bg', '#dedede');
+            document.documentElement.style.setProperty('--primary-bg', '#fff');
+            document.documentElement.style.setProperty('--sidebar-bg', 'rgba(0,0,0,0.05)');
+            document.documentElement.style.setProperty('--purple-primary', '#8d22c3');
+            document.documentElement.style.setProperty('--link-text-hover', '#8d22c3');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#fff');
+        }
+        //! Xám
+        if (kq === 18) {
+            document.documentElement.style.setProperty('--layout-bg', '#e5e3df');
+            document.documentElement.style.setProperty('--layout-header-bg', 'rgba(229,227,223,0.8)');
+            document.documentElement.style.setProperty('--player-bg', '#dedad1');
+            document.documentElement.style.setProperty('--player-text', '#32323d');
+            document.documentElement.style.setProperty('--text-primary', '#32323d');
+            document.documentElement.style.setProperty('--text-item-hover', '#844d4d');
+            document.documentElement.style.setProperty('--duration-bg', '#c0beb6');
+            document.documentElement.style.setProperty('--primary-bg', '#f7f5f3');
+            document.documentElement.style.setProperty('--sidebar-bg', 'rgba(0,0,0,0.05)');
+            document.documentElement.style.setProperty('--purple-primary', '#644646');
+            document.documentElement.style.setProperty('--link-text-hover', '#844d4d');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#e5e3df');
+        }
+        //! Xanh Nhạt
+        if (kq === 19) {
+            document.documentElement.style.setProperty('--layout-bg', '#ced9d9');
+            document.documentElement.style.setProperty('--layout-header-bg', 'rgba(206,217,217,0.8)');
+            document.documentElement.style.setProperty('--player-bg', '#c0d8d8');
+            document.documentElement.style.setProperty('--player-text', '#32323d');
+            document.documentElement.style.setProperty('--text-item-hover', '#0f7070');
+            document.documentElement.style.setProperty('--duration-bg', '#a7bcbc');
+            document.documentElement.style.setProperty('--primary-bg', '#e0ebeb');
+            document.documentElement.style.setProperty('--sidebar-bg', 'hsla(0,0%,100%,0.3)');
+            document.documentElement.style.setProperty('--purple-primary', '#0e8080');
+            document.documentElement.style.setProperty('--link-text-hover', '#0f7070');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#ced9d9');
+        }
+        // ! Hồng Cánh Sen
+        if (kq === 20) {
+            document.documentElement.style.setProperty('--layout-bg', '#f9dbdb');
+            document.documentElement.style.setProperty('--layout-header-bg', 'rgba(249,219,219,0.8)');
+            document.documentElement.style.setProperty('--player-bg', '#f9c6c5');
+            document.documentElement.style.setProperty('--player-text', '#32323d');
+            document.documentElement.style.setProperty('--text-item-hover', '#b72479');
+            document.documentElement.style.setProperty('--duration-bg', '#daadac');
+            document.documentElement.style.setProperty('--primary-bg', '#fde8e8');
+            document.documentElement.style.setProperty('--sidebar-bg', 'rgba(0,0,0,0.05)');
+            document.documentElement.style.setProperty('--purple-primary', '#b72479');
+            document.documentElement.style.setProperty('--link-text-hover', '#b72479');
+            document.documentElement.style.setProperty('--main-box-shadow', '#4242421');
+            document.documentElement.style.setProperty('--queue-player-popup-bg', '#f9dbdb');
+        }
     }
-
-    if ([9, 10, 11, 12, 13, 14, 15, 16].includes(kq)) {
-        document.documentElement.style.setProperty('--navigation-text', '#dadada');
-        document.documentElement.style.setProperty('--text-secondary', 'hsla(0, 0%, 100%, 0.5)');
-        document.documentElement.style.setProperty('--text-primary', '#fff');
-        document.documentElement.style.setProperty('--search-text', '#eee');
-        document.documentElement.style.setProperty('--text-placeholder', '#dadada');
-        document.documentElement.style.setProperty('--setting-icon-text', '#d8d8d8');
-        document.documentElement.style.setProperty('--alpha-bg', 'hsla(0,0%,100%,0.1)');
-        document.documentElement.style.setProperty('--text-item-hover', '#fff');
-        document.documentElement.style.setProperty('--sidebar-bg', 'hsla(0, 0%, 100%, 0.05)');
-        document.documentElement.style.setProperty('--border-player', 'hsla(0,0%,100%,0.1)');
-        document.documentElement.style.setProperty('--portal-menu-box-shadow', 'rgba(0,0,0,0.2)');
-    }
-
     return <>{children}</>;
 };
 export default ChangerColor;
