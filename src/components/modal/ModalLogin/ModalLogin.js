@@ -28,25 +28,26 @@ function ModalLogin() {
         .catch((err) => {
             console.log(err.message);
         })
+        dispatch(setOpenModalLogin(false));
 
     }
     
     const handleUser = () => {
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider);
-
         dispatch(setOpenModalLogin(false));
     };
     useEffect(() => {
         onAuthStateChanged(auth, (currents) => {
             if (currents?.displayName) {
                 console.log(currents);
-                const { displayName, email, photoURL } = currents;
+                const { displayName, email, firstName, photoURL } = currents;
                 dispatch(
                     setCurrentUser({
                         user: true,
                         displayName,
                         email,
+                        firstName,
                         photoURL,
                     }),
                 );
