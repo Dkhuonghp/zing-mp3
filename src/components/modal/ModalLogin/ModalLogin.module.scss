@@ -1,7 +1,7 @@
 .login {
     position: relative;
     width: 350px;
-    height: 500px;
+    height: 50%;
     border-radius: 8px;
     overflow: hidden;
     .background {
@@ -58,7 +58,7 @@
         right: 5px;
         top: 5px;
         z-index: 1;
-        color: black;
+        color: var(--text-primary);
         & ion-icon {
             font-size: 30px;
         }

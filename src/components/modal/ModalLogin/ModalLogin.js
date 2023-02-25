@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import className from 'classnames/bind';
 import { v4 as uuidv4 } from 'uuid';
-import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, FacebookAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { auth } from '~/firebasse/config';
 import { setCurrentUser, setOpenModalLogin } from '~/redux/action';
@@ -19,6 +19,18 @@ function ModalLogin() {
     const dispatch = useDispatch();
     const { openModalLogin, user } = useSelector((state) => state.action);
 
+    const signInWithFacebook = () => {
+        const provider = new FacebookAuthProvider()
+        signInWithPopup(auth, provider)
+        .then((re) => {
+            console.log(re)
+        })
+        .catch((err) => {
+            console.log(err.message);
+        })
+
+    }
+    
     const handleUser = () => {
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider);
@@ -63,6 +75,13 @@ function ModalLogin() {
                             />
                             <h3>Đăng nhập bằng google</h3>
                         </div>
+                        <div className={cx('content')} onClick={signInWithFacebook}>
+                            <img
+                                src="https://seeklogo.com//images/F/facebook-logo-966BBFBC34-seeklogo.com.png"
+                                alt=""
+                            />
+                            <h3>Đăng nhập bằng facebook</h3>
+                        </div>
                         <div className={cx('content')}>
                             <img
                                 src="https://inkythuatso.com/uploads/thumbnails/800/2021/09/zalo-logo-inkythuatso-14-15-05-01.jpg"
@@ -70,33 +89,7 @@ function ModalLogin() {
                             />
                             <h3>Đăng nhập bằng zalo</h3>
                         </div>
-                        <div className={cx('content')}>
-                            <img
-                                src="https://seeklogo.com//images/F/facebook-logo-966BBFBC34-seeklogo.com.png"
-                                alt=""
-                            />
-                            <h3>Đăng nhập bằng facebook</h3>
-                        </div>
                     </div>
-                    
-
-                    {/* <div
-                        className={cx('user-test')}
-                        onClick={() => {
-                            dispatch(
-                                setCurrentUser({
-                                    user: true,
-                                    displayName: 'Test',
-                                    email: '',
-                                    photoURL: 'https://d1j8r0kxyu9tj8.cloudfront.net/images/1533455616Z5Gtl4oKo0qM1E9.jpg',
-                                }),
-                            );
-                            dispatch(setOpenModalLogin(false));
-                            toastMessage('Đăng nhập thành công');
-                        }}
-                    >
-                        Click vào đây để dùng thử
-                    </div> */}
                     <div
                         className={cx('close')}
                         onClick={() => {

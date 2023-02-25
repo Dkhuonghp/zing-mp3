@@ -17,6 +17,9 @@ function ItemAlbum({ data, onClick }) {
     const dispatch = useDispatch();
     const { idAudio, loadMusic, activePlay } = useSelector((state) => state.dataControl);
 
+    const handleClick = () => {
+        console.log('click');
+    }
     const handlePlay = () => {
         if (data?.streamingStatus === 1) {
             dispatch(setIdAudio(data));
@@ -86,7 +89,12 @@ function ItemAlbum({ data, onClick }) {
                         </span>
                     </div>
                 </div>
-                <Button content="Khác" className={cx('more')} iconLeft={<i className="icon ic-more"></i>} />
+                <Button 
+                    content="Khác" 
+                    className={cx('more')} 
+                    iconLeft={<i className="icon ic-more"></i>} 
+                    onClick={() => handleClick}
+                />
             </div>
         </div>
     );
