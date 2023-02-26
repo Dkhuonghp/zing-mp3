@@ -6,38 +6,18 @@ import ThemeContainer from './ThemeContainer/ThemeContainer';
 const cx = classNames.bind(style);
 
 const themesModal = {
-    Dynamic: {
-        names: 'Dynamic',
-        data: [
-            {
-                id: 0,
-                title: 'Zing Music Awards',
-                link: 'https://datpham927.github.io/ZingMp3/background/modalThemes/modalTheme1/theme1.jpg',
-            },
-            {
-                id: 1,
-                title: 'Tháp Eiffel',
-                link: 'https://datpham927.github.io/ZingMp3/background/modalThemes/modalTheme1/theme2.jpg',
-            },
-        ],
-    },
     topic: {
         names: 'Chủ đề',
         data: [
             {
-                id: 2,
-                title: 'Rosé',
-                link: 'https://datpham927.github.io/ZingMp3/background/modalThemes/modalTheme2/theme1.jpg',
+                id: 0,
+                title: 'Zing Music Awards',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/zma.jpg',
             },
             {
-                id: 3,
-                title: 'IU',
-                link: 'https://datpham927.github.io/ZingMp3/background/modalThemes/modalTheme2/theme2.jpg',
-            },
-            {
-                id: 4,
-                title: 'Ji Chang Wook',
-                link: 'https://datpham927.github.io/ZingMp3/background/modalThemes/modalTheme2/theme3.jpg',
+                id: 1,
+                title: 'Tháp Eiffel',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/eiffel.jpg',
             },
         ],
     },
@@ -45,24 +25,39 @@ const themesModal = {
         names: 'Nghệ sĩ',
         data: [
             {
+                id: 2,
+                title: 'Rosé',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/rose.jpg',
+            },
+            {
+                id: 3,
+                title: 'IU',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/iu.jpg',
+            },
+            {
+                id: 4,
+                title: 'Ji Chang Wook',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/ji-chang-wook.jpg',
+            },
+            {
                 id: 5,
                 title: 'Lisa',
-                link: 'https://datpham927.github.io/ZingMp3/background/modalThemes/modalTheme2/theme4.jpg',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/lisa.jpg',
             },
             {
                 id: 6,
                 title: 'Jennie Kim',
-                link: 'https://datpham927.github.io/ZingMp3/background/modalThemes/modalTheme2/theme5.jpg',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/jennie.jpg',
             },
             {
                 id: 7,
                 title: 'Jisoo',
-                link: 'https://datpham927.github.io/ZingMp3/background/modalThemes/modalTheme2/theme6.jpg',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/jisoo.jpg',
             },
             {
                 id: 8,
                 title: 'Jack',
-                link: 'https://datpham927.github.io/ZingMp3/background/modalThemes/modalTheme2/theme7.jpg',
+                link: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/jack.jpg',
             },
         ],
     },
@@ -160,7 +155,6 @@ function Theme() {
                     </div>
                 </div>
                 <div className={cx('topic-body')}>
-                    <ThemeContainer data={themesModal.Dynamic} />
                     <ThemeContainer data={themesModal.topic} />
                     <ThemeContainer data={themesModal.artist} />
                     <ThemeContainer data={themesModal.darkColor} />

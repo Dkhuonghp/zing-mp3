@@ -58,6 +58,7 @@ function ModalAddPlayList() {
         } else {
             if (summit) {
                 if (data?.song?.items?.length > 0) {
+                    toastMessage(`Tạo Playlist "${data?.title}" thành công`);
                     dispatch(setCreatePlayList(data));
                     navigate('/mymusic');
                 } else {

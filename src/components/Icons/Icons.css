@@ -61,6 +61,9 @@ body .tippy-content {
 .ic-add:before {
     content: '\62';
 }
+.ic-24-add::before {
+    content: '\e92a';
+}
 .ic-go-up:before {
     content: '\42';
 }

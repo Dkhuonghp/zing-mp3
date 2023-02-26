@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import ItemPlayList from '~/components/item/ItemPlayList/ItemPlayList';
 import classNames from 'classnames/bind';
-import style from './PlayList.module.scss';
 import Button from '~/components/Button';
+import style from './PlayList.module.scss';
 import { setBooleanEdit, setModalAddPlayList } from '~/redux/action';
 import Empty from '~/components/Empty/Empty';
 
@@ -18,7 +18,7 @@ function PlayList() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
-                <h3>PLAYLIST</h3>
+                <h3>Playlist</h3>
                 <Button
                     content="Tạo playlist mới"
                     className={cx('btn')}
@@ -26,11 +26,16 @@ function PlayList() {
                     onClick={handleAddPlayList}
                 />
             </div>
+            {/* <div className={cx('container')}>
+                <div className={cx('empty-playlist') + ' l- m-3 c-6 col'} onClick={handleAddPlayList}>
+                    <div className={cx('content')}>
+                        <i className="icon ic-24-add"></i>
+                        <span>Tạo playlist mới</span>
+                    </div>
+                </div>
+            </div> */}
             {playListFavorite?.length > 0 || privatePlayLists?.length > 0 ? (
                 <div className={cx('body')}>
-                    {playListFavorite.map((e) => (
-                        <ItemPlayList data={e} />
-                    ))}
                     {privatePlayLists.map((e) => (
                         <ItemPlayList data={e} type="private-playlist" />
                     ))}

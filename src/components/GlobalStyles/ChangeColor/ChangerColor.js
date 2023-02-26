@@ -18,6 +18,7 @@ const ChangerColor = ({ children }) => {
         document.documentElement.style.setProperty('--text-item-hover', '#fff');
         document.documentElement.style.setProperty('--sidebar-bg', 'hsla(0, 0%, 100%, 0.05)');
         document.documentElement.style.setProperty('--border-player', 'hsla(0,0%,100%,0.1)');
+        document.documentElement.style.setProperty('--border-primary', 'hsla(0,0%,100%,0.1)');
         document.documentElement.style.setProperty('--portal-menu-box-shadow', 'rgba(0,0,0,0.2)');
         document.documentElement.style.setProperty(
             '--empty-song-icon',
@@ -182,7 +183,7 @@ const ChangerColor = ({ children }) => {
         document.documentElement.style.setProperty('--setting-icon-text', '#495057');
         document.documentElement.style.setProperty('--alpha-bg', 'rgba(0,0,0,0.05)');
         document.documentElement.style.setProperty('--sidebar-bg', 'hsla(0,0%,100%,0.3)');
-        document.documentElement.style.setProperty('--border-primary', 'rgba(0,0,0,0.03)');
+        document.documentElement.style.setProperty('--border-primary', 'rgba(0,0,0,0.1)');
         document.documentElement.style.setProperty('--loading-bg', 'rgba(0,0,0,0.05)');
         document.documentElement.style.setProperty('--portal-menu-box-shadow', 'rgba(0,0,0,0.3)');
         document.documentElement.style.setProperty(

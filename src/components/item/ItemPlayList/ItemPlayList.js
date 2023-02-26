@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 import toastMessage from '~/components/modal/toast';
 import { setBooleanEdit, setKindPlaylist, setModalAddPlayList, setModalPortalDelete } from '~/redux/action';
 import { setIdPlayList, setPlayListFavorite, setPlayListTitle } from '~/redux/FavoriteList';
+
 import styles from './ItemPlayList.module.scss';
 
 const cx = classNames.bind(styles);
@@ -17,6 +18,7 @@ function ItemPlayList({ data, type = '', description, className }) {
     const dispatch = useDispatch();
     const [favorite, setFavorite] = useState([]);
     const { playListFavorite } = useSelector((state) => state.Favorite);
+    const { currentUser } = useSelector((state) => state.action);
     const { user } = useSelector((state) => state.action);
     useEffect(() => {
         setFavorite(playListFavorite?.map((e) => e.encodeId));
@@ -89,7 +91,8 @@ function ItemPlayList({ data, type = '', description, className }) {
                             </span>
                         ) : (
                             <Link to={data.artists.link}>{data.artists.alias}</Link>
-                        ))}
+                        ))
+                    }
                 </div>
             </div>
         </li>
@@ -137,6 +140,9 @@ function ItemPlayList({ data, type = '', description, className }) {
                 <div className={cx('content')}>
                     <span className={cx('title')}>
                         <Link to={data.link}>{data.title}</Link>
+                    </span>
+                    <span className={cx('subtitle')}>
+                        {currentUser?.displayName}
                     </span>
 
                     {data.name && (

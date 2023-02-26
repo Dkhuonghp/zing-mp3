@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         & h3 {
-            font-size: 2rem;
+            font-size: 24px;
             color: var(--text-primary);
         }
         & .btn {
@@ -18,10 +18,45 @@
             }
         }
     }
+    // .container {
+    //     display: flex;
+    //     
+    //     .empty-playlist {
+    //         display: flex;
+    //         justify-content: center;
+    //         border: 1px solid var(--border-primary);
+    //         border-radius: 4px;
+    //         margin-bottom: 30px;
+    //         cursor: pointer;
+    //         &:hover {
+    
+    //             border: 1px solid var(--purple-primary);
+    //         }
+    //         &:hover .content{
+    //             color: var(--link-text-hover);
+    //         }
+    //         .content {
+    //             font-size: 16px;
+    //             color: var(--text-primary);
+    //             display: flex;
+    //             flex-direction: column;
+    //             align-items: center;
+    //             justify-content: center;
+    //             i {
+    //                 font-size: 47px;
+    //             }
+    //         }
+    //     }
+    // }
     .body {
         display: flex;
         flex-wrap: wrap;
-        // margin: 0 -15px;
-        margin-top: 20px;
+        margin-top: 28px;
+    }
+}
+
+@media (max-width: 820px) {
+    .container {
+        flex-wrap: wrap;
     }
 }
