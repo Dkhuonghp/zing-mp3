@@ -23,7 +23,6 @@ function LeftAlbum({ data }) {
     const { loadMusic, activePlay } = useSelector((state) => state.dataControl);
     const { playListFavorite } = useSelector((state) => state.Favorite);
     const { user } = useSelector((state) => state.action);
-    const { currentUser } = useSelector((state) => state.action);
     useEffect(() => {
         setFavorite(playListFavorite?.map((e) => e.encodeId));
     }, [playListFavorite]);
@@ -74,10 +73,6 @@ function LeftAlbum({ data }) {
                         />
                     )}
                 </h3>
-                <div className={cx('created-by')}>
-                    Tạo bởi
-                    <span> {currentUser?.displayName}</span>
-                </div>
                 <div className={cx('artist')}>
                     {data?.artists?.map((i, index) => (
                         <span key={uuidv4}>

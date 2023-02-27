@@ -141,9 +141,10 @@ function ItemPlayList({ data, type = '', description, className }) {
                     <span className={cx('title')}>
                         <Link to={data.link}>{data.title}</Link>
                     </span>
-                    <span className={cx('subtitle')}>
-                        {currentUser?.displayName}
-                    </span>
+                    <div className={cx('subtitle')}>
+                        Tạo bởi
+                        <span> {currentUser?.displayName}</span>
+                    </div>
 
                     {data.name && (
                         <span className={cx('subtitle')}>
