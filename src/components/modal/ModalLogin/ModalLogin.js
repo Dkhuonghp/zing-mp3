@@ -37,13 +37,6 @@ function ModalLogin() {
         signInWithPopup(auth, provider);
         dispatch(setOpenModalLogin(false));
     };
-
-    const signInWithEmail = () => {
-        const provider = new EmailAuthProvider()
-        console.log(provider);
-        signInWithPopup(auth, provider);
-        dispatch(setOpenModalLogin(false));
-    }
     useEffect(() => {
         onAuthStateChanged(auth, (currents) => {
             if (currents?.displayName) {
@@ -96,13 +89,6 @@ function ModalLogin() {
                                 alt=""
                             />
                             <h3>Đăng nhập bằng Zalo</h3>
-                        </div>
-                        <div className={cx('content')} onClick={signInWithEmail}>
-                            {/* <img
-                                src="https://inkythuatso.com/uploads/thumbnails/800/2021/09/zalo-logo-inkythuatso-14-15-05-01.jpg"
-                                alt=""
-                            /> */}
-                            <h3>Đăng nhập bằng Email</h3>
                         </div>
                     </div>
                     <div
