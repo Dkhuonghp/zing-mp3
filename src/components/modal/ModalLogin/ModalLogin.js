@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import className from 'classnames/bind';
 import { v4 as uuidv4 } from 'uuid';
-import { GoogleAuthProvider, FacebookAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, FacebookAuthProvider, EmailAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { auth } from '~/firebasse/config';
 import { setCurrentUser, setOpenModalLogin } from '~/redux/action';
@@ -32,11 +32,18 @@ function ModalLogin() {
 
     }
     
-    const handleUser = () => {
+    const signInWithGoogle = () => {
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider);
         dispatch(setOpenModalLogin(false));
     };
+
+    const signInWithEmail = () => {
+        const provider = new EmailAuthProvider()
+        console.log(provider);
+        signInWithPopup(auth, provider);
+        dispatch(setOpenModalLogin(false));
+    }
     useEffect(() => {
         onAuthStateChanged(auth, (currents) => {
             if (currents?.displayName) {
@@ -69,26 +76,33 @@ function ModalLogin() {
                 <div className={cx('login')}>
                     <div className={cx('background')}>
                         
-                        <div className={cx('content')} onClick={handleUser}>
+                        <div className={cx('content')} onClick={signInWithGoogle}>
                             <img
                                 src="https://img-new.cgtrader.com/items/2590270/190c8c862e/google-logo-v1-001-3d-model-low-poly-max-obj-3ds-fbx-ma-stl.jpg"
                                 alt=""
                             />
-                            <h3>Đăng nhập bằng google</h3>
+                            <h3>Đăng nhập bằng Google</h3>
                         </div>
                         <div className={cx('content')} onClick={signInWithFacebook}>
                             <img
                                 src="https://seeklogo.com//images/F/facebook-logo-966BBFBC34-seeklogo.com.png"
                                 alt=""
                             />
-                            <h3>Đăng nhập bằng facebook</h3>
+                            <h3>Đăng nhập bằng Facebook</h3>
                         </div>
                         <div className={cx('content')}>
                             <img
                                 src="https://inkythuatso.com/uploads/thumbnails/800/2021/09/zalo-logo-inkythuatso-14-15-05-01.jpg"
                                 alt=""
                             />
-                            <h3>Đăng nhập bằng zalo</h3>
+                            <h3>Đăng nhập bằng Zalo</h3>
+                        </div>
+                        <div className={cx('content')} onClick={signInWithEmail}>
+                            {/* <img
+                                src="https://inkythuatso.com/uploads/thumbnails/800/2021/09/zalo-logo-inkythuatso-14-15-05-01.jpg"
+                                alt=""
+                            /> */}
+                            <h3>Đăng nhập bằng Email</h3>
                         </div>
                     </div>
                     <div
