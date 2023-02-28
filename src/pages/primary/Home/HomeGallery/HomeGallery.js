@@ -15,7 +15,6 @@ function HomeGallery({ data }) {
     useEffect(() => {
         let interval;
         const listImg = document?.querySelectorAll('.item-image-selector');
-        console.log(listImg);
         const autoChange = () => {
             let numberIndex = 0;
             const change = () => {
