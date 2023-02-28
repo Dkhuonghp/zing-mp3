@@ -30,7 +30,7 @@ const initialState = {
     booleanModalAddPlayList: false,
     booleanKindPlaylist: JSON.parse(localStorage.getItem('booleanKindPlaylist')) || false, //true playlist cá nhân
     openLyric: false,
-    bgrIndex: JSON.parse(localStorage.getItem('bgrIndex')) || 2,
+    bgrIndex: JSON.parse(localStorage.getItem('bgrIndex')) || 0,
     timer: JSON.parse(localStorage.getItem('timer')) || 0, //thời gian hẹn giờ (second)
     dateTime: JSON.parse(localStorage.getItem('dateTime')) || 0, //thời gian dự kiến dừng nhạc (hour,day)
 };

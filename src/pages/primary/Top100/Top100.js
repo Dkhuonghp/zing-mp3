@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { getTop100 } from '~/components/Api/Service';
 import ContainerPlayList from '~/components/container/ContainerPlayList';
 import Loading from '~/components/load/Loading/Loading';
+import { Helmet } from 'react-helmet';
 
 const cx = className.bind(style);
 function Top100() {
@@ -20,6 +21,9 @@ function Top100() {
     }, []);
     return (
         <>
+            <Helmet>
+                <title>Top 100 | Tuyển tập nhạc hay chọn lọc</title>
+            </Helmet>
             <div className={cx('header')}>
                 <ImgTop100 />
             </div>

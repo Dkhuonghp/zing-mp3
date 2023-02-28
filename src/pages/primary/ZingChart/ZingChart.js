@@ -12,8 +12,9 @@ import ItemChartBox from './ItemChartBox';
 import Loading from '~/components/load/Loading/Loading';
 import ContainerSongs from '~/components/container/ContainerSongs';
 import { setCurrentIndex, setPlayListAudio } from '~/redux/dataControl';
-
+import { Helmet } from 'react-helmet';
 const cx = className.bind(style);
+
 function ZingChart() {
     const dispatch = useDispatch();
     const [selection, setSelection] = useState(false);
@@ -36,54 +37,59 @@ function ZingChart() {
 
     const data = useSelector((state) => state.dataZingChart.dataZingChart);
     return data?.length !== 0 ? (
-        <div className={cx('wrapper')}>
-            <div className={cx('bg-blur')}></div>
-            <div className={cx('bg-alpha')}></div>
-            <div className={cx('bg-alpha-1')}></div>
-            <div className={cx('top')}>
-                <h1>#zingchart</h1>
-                <Button
-                    noContent
-                    iconLeft={<i className="icon ic-play"></i>}
-                    className={cx('btn')}
-                    onClick={handleClickPlay}
-                />
-            </div>
-            <div>
-                <Container>
-                    {selection ? (
-                        <ContainerSongs
-                            type="top100"
-                            title={'#zingChart'}
-                            data={data?.RTChart?.items}
-                            index={data?.RTChart?.items?.length}
-                            link={'/album/zingchart-DIMZ-TVk-NH4T-Phat-Ho/ZO68OC68.html'}
-                        />
-                    ) : (
-                        <ContainerSongs
-                            type="top100"
-                            data={data?.RTChart?.items}
-                            index={10}
-                            title={'#zingChart'}
-                            link={'/album/zingchart-DIMZ-TVk-NH4T-Phat-Ho/ZO68OC68.html'}
-                        />
-                    )}
-                    {!selection && (
-                        <ButtonAction className={cx('btn-more')} onClick={() => setSelection(!selection)}>
-                            Xem top 100
-                        </ButtonAction>
-                    )}
-                </Container>
+        <>
+            <Helmet>
+                <title>#zingchart | Xem bài hát, album, MV đang hot nhất hiện tại</title>
+            </Helmet>
+            <div className={cx('wrapper')}>
+                <div className={cx('bg-blur')}></div>
+                <div className={cx('bg-alpha')}></div>
+                <div className={cx('bg-alpha-1')}></div>
+                <div className={cx('top')}>
+                    <h1>#zingchart</h1>
+                    <Button
+                        noContent
+                        iconLeft={<i className="icon ic-play"></i>}
+                        className={cx('btn')}
+                        onClick={handleClickPlay}
+                    />
+                </div>
                 <div>
-                    <div className={cx('title')}>Bảng Xếp Hạng Tuần</div>
                     <Container>
-                        <ItemChartBox title={'Việt Nam'} data={data?.weekChart?.vn?.items} onClick={handleClickPlay} />
-                        <ItemChartBox title={'US-UK'} data={data?.weekChart?.us?.items} onClick={handleClickPlay} />
-                        <ItemChartBox title={'K-POP'} data={data?.weekChart?.korea?.items} onClick={handleClickPlay} />
+                        {selection ? (
+                            <ContainerSongs
+                                type="top100"
+                                title={'#zingChart'}
+                                data={data?.RTChart?.items}
+                                index={data?.RTChart?.items?.length}
+                                link={'/album/zingchart-DIMZ-TVk-NH4T-Phat-Ho/ZO68OC68.html'}
+                            />
+                        ) : (
+                            <ContainerSongs
+                                type="top100"
+                                data={data?.RTChart?.items}
+                                index={10}
+                                title={'#zingChart'}
+                                link={'/album/zingchart-DIMZ-TVk-NH4T-Phat-Ho/ZO68OC68.html'}
+                            />
+                        )}
+                        {!selection && (
+                            <ButtonAction className={cx('btn-more')} onClick={() => setSelection(!selection)}>
+                                Xem top 100
+                            </ButtonAction>
+                        )}
                     </Container>
+                    <div>
+                        <div className={cx('title')}>Bảng Xếp Hạng Tuần</div>
+                        <Container>
+                            <ItemChartBox title={'Việt Nam'} data={data?.weekChart?.vn?.items} onClick={handleClickPlay} />
+                            <ItemChartBox title={'US-UK'} data={data?.weekChart?.us?.items} onClick={handleClickPlay} />
+                            <ItemChartBox title={'K-POP'} data={data?.weekChart?.korea?.items} onClick={handleClickPlay} />
+                        </Container>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     ) : (
         <Loading />
     );

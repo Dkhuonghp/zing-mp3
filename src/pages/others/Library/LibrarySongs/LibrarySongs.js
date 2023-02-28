@@ -12,6 +12,7 @@ import { setCurrentIndex, setOpenQueueList, setPlayListAudio } from '~/redux/dat
 import { setAddPlayList, setSelectionAll } from '~/redux/FavoriteList';
 
 import style from './LibrarySongs.module.scss';
+import { Helmet } from 'react-helmet';
 
 const cx = classNames.bind(style);
 
@@ -47,40 +48,45 @@ function LibrarySongs() {
         toastMessage(`Đã ${addPlayList?.length} thêm bài hát vào danh sách`);
     };
     return songFavorite?.length > 0 ? (
-        <Container title="Bài hát yêu thích">
-            <div className={cx('header')}>
-                <div className={cx('left')}>
-                    {addPlayList?.length > 0 ? (
-                        <div className={cx('add-playlist')}>
-                            <div className={cx('action-checkbox', 'active-checkbox')}>
-                                <i className="icon ic-song"></i>
-                                <div className={cx('checkbox')} onClick={() => setAll((e) => !e)}>
-                                    <input
-                                        type="checkBox"
-                                        checked={songFavorite?.length === addPlayList?.length}
-                                    ></input>
+        <>
+            <Helmet>
+                <title>Nhạc cá nhân | Xem bài hát, album, MV đang hot nhất hiện tại</title>
+            </Helmet>
+            <Container title="Bài hát yêu thích">
+                <div className={cx('header')}>
+                    <div className={cx('left')}>
+                        {addPlayList?.length > 0 ? (
+                            <div className={cx('add-playlist')}>
+                                <div className={cx('action-checkbox', 'active-checkbox')}>
+                                    <i className="icon ic-song"></i>
+                                    <div className={cx('checkbox')} onClick={() => setAll((e) => !e)}>
+                                        <input
+                                            type="checkBox"
+                                            checked={songFavorite?.length === addPlayList?.length}
+                                        ></input>
+                                    </div>
                                 </div>
+                                <ButtonAction
+                                    btnItem
+                                    className={cx('btn-add')}
+                                    icon={<i className="icon ic-add-play-now"></i>}
+                                    onClick={handleAddPlayList}
+                                >
+                                    Thêm vào danh sách phát
+                                </ButtonAction>
                             </div>
-                            <ButtonAction
-                                btnItem
-                                className={cx('btn-add')}
-                                icon={<i className="icon ic-add-play-now"></i>}
-                                onClick={handleAddPlayList}
-                            >
-                                Thêm vào danh sách phát
-                            </ButtonAction>
-                        </div>
-                    ) : (
-                        <div className={cx('song')}>BÀI HÁT</div>
-                    )}
+                        ) : (
+                            <div className={cx('song')}>BÀI HÁT</div>
+                        )}
+                    </div>
+                    <div className={cx('main') + ' c-0'}>ALBUM</div>
+                    <div className={cx('right')}>THỜI GIAN</div>
                 </div>
-                <div className={cx('main') + ' c-0'}>ALBUM</div>
-                <div className={cx('right')}>THỜI GIAN</div>
-            </div>
-            <Container className={cx('body')}>
-                <ContainerSongs data={songFavorite} type="add" kind="private" checkBox />
+                <Container className={cx('body')}>
+                    <ContainerSongs data={songFavorite} type="add" kind="private" checkBox />
+                </Container>
             </Container>
-        </Container>
+        </>
     ) : (
         <Empty title="Chưa có bài hát yêu thích trong thư viện cá nhân" link="/moi-phat-hanh" />
     );

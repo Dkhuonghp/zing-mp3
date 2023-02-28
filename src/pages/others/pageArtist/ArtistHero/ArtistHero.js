@@ -11,6 +11,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { artist } from '~/components/Api/Service';
 import Loading from '~/components/load/Loading/Loading';
+import { Helmet } from 'react-helmet';
 
 const cx = classNames.bind(styles);
 
@@ -33,22 +34,27 @@ function ArtistHero() {
         fetchApi();
     }, [id.name]);
     return kt && data?.length !== 0 ? (
-        <div className={cx('wrapper')}>
-            <ArtistHeroTop />
-            {data?.sections.map((e, i) =>
-                e.sectionType === 'song' ? (
-                    <ContainerSongs data={e.items} title={e.title} index={6} all link={e.link} />
-                ) : e.sectionType === 'playlist' ? (
-                    <ContainerPlaylist data={e.items} title={e.title} />
-                ) : e.sectionType === 'video' ? (
-                    <ContainerVideos data={e.items} title={e.title} />
-                ) : e.sectionType === 'artist' ? (
-                    <ContainerArtists data={e.items} title={e.title} />
-                ) : (
-                    ''
-                ),
-            )}
-        </div>
+        <>
+            <Helmet>
+                <title>{data?.name} - Zing MP3 Official Account</title>
+            </Helmet>
+            <div className={cx('wrapper')}>
+                <ArtistHeroTop />
+                {data?.sections.map((e, i) =>
+                    e.sectionType === 'song' ? (
+                        <ContainerSongs data={e.items} title={e.title} index={6} all link={e.link} />
+                    ) : e.sectionType === 'playlist' ? (
+                        <ContainerPlaylist data={e.items} title={e.title} />
+                    ) : e.sectionType === 'video' ? (
+                        <ContainerVideos data={e.items} title={e.title} />
+                    ) : e.sectionType === 'artist' ? (
+                        <ContainerArtists data={e.items} title={e.title} />
+                    ) : (
+                        ''
+                    ),
+                )}
+            </div>
+        </>
     ) : (
         <Loading />
     );

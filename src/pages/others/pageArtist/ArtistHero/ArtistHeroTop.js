@@ -36,42 +36,44 @@ function ArtistHeroTop() {
     };
     return (
         <div className={cx('header')}>
-            <div
-                className={cx('background')}
-                style={{
-                    backgroundImage: `url(${
-                        data?.cover ||
-                        'https://bienthuy.com/bienthuy-img/2020/02/hinh-nen-girl-xinh-4k-cho-laptop22-scaled.jpg'
-                    }) `,
-                }}
-            />
+            <div className={cx('bg-blur')}></div>
+            <div className={cx('bg-alpha')}></div>
+            <div className={cx('bg-alpha-1')}></div>
             <div className={cx('content')}>
-                <div className={cx('title')}>
-                    <h1>{data?.name}</h1>
-                    <Button
-                        noContent
-                        iconLeft={play ? <i className="fa-solid fa-pause"></i> : <i className="icon ic-play"></i>}
-                        className={cx('btn')}
-                        onClick={handleOnClick}
-                    />
-                </div>
-                <div className={cx('action')}>
-                    <div className={cx('follow')}>
-                        <Follow follow={data?.follow} /> người quan tâm
+                <img src={data?.thumbnail} alt="" />
+                <div className={cx('infomation')}>
+                    <div>
+                        <div className={cx('title')}>
+                            <h1>{data?.name}</h1>
+                            <Button
+                                noContent
+                                iconLeft={play ? <i className="fa-solid fa-pause"></i> : <i className="icon ic-play"></i>}
+                                className={cx('btn')}
+                                onClick={handleOnClick}
+                            />
+                        </div>
                     </div>
-                    <ButtonAction onClick={() => setCare(!care)} className={cx('btn', !care && 'care')}>
-                        {care ? (
-                            <>
-                                <i className="icon ic-check"></i>
-                                <span>ĐÃ QUAN TÂM</span>
-                            </>
-                        ) : (
-                            <>
-                                <i className="icon ic-addfriend"></i>
-                                <span>QUAN TÂM</span>
-                            </>
-                        )}
-                    </ButtonAction>
+                    <div>
+
+                        <div className={cx('action')}>
+                            <div className={cx('follow')}>
+                                <Follow follow={data?.follow} /> người quan tâm
+                            </div>
+                            <ButtonAction onClick={() => setCare(!care)} className={cx('btn', !care && 'care')}>
+                                {care ? (
+                                    <>
+                                        <i className="icon ic-check"></i>
+                                        <span>ĐÃ QUAN TÂM</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <i className="icon ic-addfriend"></i>
+                                        <span>QUAN TÂM</span>
+                                    </>
+                                )}
+                            </ButtonAction>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

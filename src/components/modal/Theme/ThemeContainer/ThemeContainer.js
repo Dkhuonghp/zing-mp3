@@ -7,7 +7,6 @@ import style from './ThemeContainer.module.scss';
 const cx = classNames.bind(style);
 
 function ThemeContainer({ data }) {
-    console.log(data);
     return (
         <>
             <div className={cx('topic-title')}>

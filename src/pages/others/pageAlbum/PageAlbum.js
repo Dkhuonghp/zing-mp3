@@ -11,6 +11,7 @@ import LeftAlbum from './LeftAlbum/LeftAlbum';
 import RightAlbum from './RightAlbum/RightAlbum';
 import Loading from '~/components/load/Loading/Loading';
 import { useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet';
 const cx = classNames.bind(style);
 
 function PageAlbum() {
@@ -43,19 +44,24 @@ function PageAlbum() {
         }
     }, [id]);
     return data?.length !== 0 ? (
-        <div className={cx('wrapper')}>
-            <div className={cx('top')}>
-                <LeftAlbum data={data} />
-                <RightAlbum data={data} />
+        <>
+            <Helmet>
+                <title>{data?.title} | Album 320 lossless</title>
+            </Helmet>
+            <div className={cx('wrapper')}>
+                <div className={cx('top')}>
+                    <LeftAlbum data={data} />
+                    <RightAlbum data={data} />
+                </div>
+                <div className={cx('body')}>
+                    {data?.playlists && <ContainerPlaylist scroll data={data?.playlists} title="Playlist/Album" />}
+                    {/* ---------------------- */}
+                    {data?.videos && <ContainerVideos scroll data={data?.videos} title="MV" />}
+                    {/* ---------------------- */}
+                    {data?.artists && <ContainerArtists scroll data={data?.artists} title="Nghệ Sĩ/OA" />}
+                </div>
             </div>
-            <div className={cx('body')}>
-                {data?.playlists && <ContainerPlaylist scroll data={data?.playlists} title="Playlist/Album" />}
-                {/* ---------------------- */}
-                {data?.videos && <ContainerVideos scroll data={data?.videos} title="MV" />}
-                {/* ---------------------- */}
-                {data?.artists && <ContainerArtists scroll data={data?.artists} title="Nghệ Sĩ/OA" />}
-            </div>
-        </div>
+        </>
     ) : (
         <Loading />
     );

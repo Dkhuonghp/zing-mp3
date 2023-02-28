@@ -42,6 +42,8 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--text-item-hover', '#fff');
             document.documentElement.style.setProperty('--player-bg', 'rgb(47,7,78)');
             document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-alpha', '')
+            document.documentElement.style.setProperty('--bg-alpha-1', '')
             document.documentElement.style.setProperty('--bg-chart','');
         }
         if (kq === 1) {
@@ -54,6 +56,8 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--player-bg', 'rgb(24,24,24)');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#2d2f32');
             document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-alpha', '')
+            document.documentElement.style.setProperty('--bg-alpha-1', '')
             document.documentElement.style.setProperty('--bg-chart','');
         }
         if (kq === 2) {
@@ -67,6 +71,8 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--player-bg', 'rgb(6,22,65)');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#223c75');
             document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-alpha', '')
+            document.documentElement.style.setProperty('--bg-alpha-1', '')
             document.documentElement.style.setProperty('--bg-chart','');
         }
         if (kq === 8) {
@@ -80,6 +86,8 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');
             document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-alpha', '')
+            document.documentElement.style.setProperty('--bg-alpha-1', '')
             document.documentElement.style.setProperty('--bg-chart','');
             document.documentElement.style.setProperty(
                 '--linear-gradient-bg',
@@ -101,6 +109,8 @@ const ChangerColor = ({ children }) => {
                 '--bg-blur',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
             );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
             document.documentElement.style.setProperty(
                 '--bg-chart',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
@@ -121,6 +131,8 @@ const ChangerColor = ({ children }) => {
                 '--bg-blur',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
             );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
             document.documentElement.style.setProperty(
                 '--bg-chart',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
@@ -141,6 +153,8 @@ const ChangerColor = ({ children }) => {
                 '--bg-blur',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
             );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
             document.documentElement.style.setProperty(
                 '--bg-chart',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
@@ -161,6 +175,8 @@ const ChangerColor = ({ children }) => {
                 '--bg-blur',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
             );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
             document.documentElement.style.setProperty(
                 '--bg-chart',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
@@ -181,6 +197,8 @@ const ChangerColor = ({ children }) => {
                 '--bg-blur',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
             );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
             document.documentElement.style.setProperty(
                 '--bg-chart',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
@@ -201,6 +219,8 @@ const ChangerColor = ({ children }) => {
                 '--bg-blur',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
             );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
             document.documentElement.style.setProperty(
                 '--bg-chart',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
@@ -221,6 +241,8 @@ const ChangerColor = ({ children }) => {
                 '--bg-blur',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
             );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
             document.documentElement.style.setProperty(
                 '--bg-chart',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
@@ -241,6 +263,8 @@ const ChangerColor = ({ children }) => {
                 '--bg-blur',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
             );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
             document.documentElement.style.setProperty(
                 '--bg-chart',
                 'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
@@ -282,6 +306,10 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--player-bg', 'rgb(245,230,224)');
             document.documentElement.style.setProperty('--player-text', '#32323d');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#e5e3df');
+            document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-alpha', '')
+            document.documentElement.style.setProperty('--bg-alpha-1', '')
+            document.documentElement.style.setProperty('--bg-chart','');
         }
         if (kq === 4) {
             document.documentElement.style.setProperty('--layout-bg', '#B3D8DB');
@@ -293,6 +321,10 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--text-item-hover', '#1F5A93');
             document.documentElement.style.setProperty('--player-bg', '#A3D5DC');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#ced9d9');
+            document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-alpha', '')
+            document.documentElement.style.setProperty('--bg-alpha-1', '')
+            document.documentElement.style.setProperty('--bg-chart','');
         }
         if (kq === 5) {
             document.documentElement.style.setProperty('--layout-bg', '#F1DDD8');
@@ -306,6 +338,10 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--box-hot-item-bg-hove', 'rgba(254,255,255,0.4)');
             document.documentElement.style.setProperty('--box-hot-item-bg', 'rgba(254,255,255,0.3)');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#f9dbdb');
+            document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-alpha', '')
+            document.documentElement.style.setProperty('--bg-alpha-1', '')
+            document.documentElement.style.setProperty('--bg-chart','');
         }
         if (kq === 6) {
             document.documentElement.style.setProperty('--layout-bg', '#BBB9C4');
@@ -317,6 +353,10 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#6F1F89');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#e5e3df');
             document.documentElement.style.setProperty('--player-bg', '#C6C4D1');
+            document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-alpha', '')
+            document.documentElement.style.setProperty('--bg-alpha-1', '')
+            document.documentElement.style.setProperty('--bg-chart','');
         }
         if (kq === 7) {
             document.documentElement.style.setProperty('--layout-bg', '#fff');
@@ -330,6 +370,10 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--player-bg', '#fff');
             document.documentElement.style.setProperty('--player-text', '#32323d');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#fff');
+            document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-alpha', '')
+            document.documentElement.style.setProperty('--bg-alpha-1', '')
+            document.documentElement.style.setProperty('--bg-chart','');
         }
         //! Sáng
         if (kq === 17) {
@@ -345,6 +389,16 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#8d22c3');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#fff');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
         //! Xám
         if (kq === 18) {
@@ -361,6 +415,16 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#844d4d');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#e5e3df');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
         //! Xanh Nhạt
         if (kq === 19) {
@@ -376,6 +440,16 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#0f7070');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#ced9d9');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
         // ! Hồng Cánh Sen
         if (kq === 20) {
@@ -391,6 +465,16 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#b72479');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#f9dbdb');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty('--bg-alpha', 'linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg))')
+            document.documentElement.style.setProperty('--bg-alpha-1', 'linear-gradient(180deg,var(--layout-bg),var(--layout-bg))')
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
     }
     return <>{children}</>;

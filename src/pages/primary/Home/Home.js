@@ -16,6 +16,7 @@ import HomeEvent from './HomeEvent/HomeEvent';
 import ContainerPlaylist from '~/components/container/ContainerPlayList';
 import Loading from '~/components/load/Loading/Loading';
 import { memo } from 'react';
+import { Helmet } from 'react-helmet';
 
 const cx = className.bind(style);
 function Home() {
@@ -30,29 +31,34 @@ function Home() {
     const { dataHome } = useSelector((state) => state.dataHome);
 
     return dataHome?.length !== 0 ? (
-        <div className={cx('wrapper')}>
-            {dataHome?.map((i) =>
-                i.sectionType === 'banner' ? (
-                    <HomeGallery data={i} key={uuidv4()} />
-                ) : i.sectionType === 'playlist' && i.sectionId === 'h100' ? (
-                    <ContainerPlaylist key={uuidv4()} data={i?.items} title={i?.title} link={i.link} all scroll />
-                ) : i.sectionType === 'playlist' ? (
-                    <ContainerPlaylist key={uuidv4()} data={i?.items} title={i?.title} scroll />
-                ) : i.sectionType === 'livestream' ? (
-                    <HomeLiveRadio key={uuidv4()} data={i} />
-                ) : i.sectionType === 'new-release' ? (
-                    <HomeRelease key={uuidv4()} data={i} />
-                ) : i.sectionType === 'artistSpotlight' ? (
-                    <HomeSpotlight key={uuidv4()} data={i} />
-                ) : i.sectionType === 'newReleaseChart' ? (
-                    <HomeNewSong key={uuidv4()} data={i} />
-                ) : i.sectionType === 'event' ? (
-                    <HomeEvent key={uuidv4()} data={i} />
-                ) : (
-                    ''
-                ),
-            )}
-        </div>
+        <>
+            <Helmet>
+                <title>Zing MP3 | Nghe tải nhạc chất lượng cao trên desktop, mobile và TV</title>
+            </Helmet>
+            <div className={cx('wrapper')}>
+                {dataHome?.map((i) =>
+                    i.sectionType === 'banner' ? (
+                        <HomeGallery data={i} key={uuidv4()} />
+                    ) : i.sectionType === 'playlist' && i.sectionId === 'h100' ? (
+                        <ContainerPlaylist key={uuidv4()} data={i?.items} title={i?.title} link={i.link} all scroll />
+                    ) : i.sectionType === 'playlist' ? (
+                        <ContainerPlaylist key={uuidv4()} data={i?.items} title={i?.title} scroll />
+                    ) : i.sectionType === 'livestream' ? (
+                        <HomeLiveRadio key={uuidv4()} data={i} />
+                    ) : i.sectionType === 'new-release' ? (
+                        <HomeRelease key={uuidv4()} data={i} />
+                    ) : i.sectionType === 'artistSpotlight' ? (
+                        <HomeSpotlight key={uuidv4()} data={i} />
+                    ) : i.sectionType === 'newReleaseChart' ? (
+                        <HomeNewSong key={uuidv4()} data={i} />
+                    ) : i.sectionType === 'event' ? (
+                        <HomeEvent key={uuidv4()} data={i} />
+                    ) : (
+                        ''
+                    ),
+                )}
+            </div>
+        </>
     ) : (
         <Loading />
     );

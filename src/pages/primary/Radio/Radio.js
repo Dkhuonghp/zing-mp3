@@ -12,6 +12,7 @@ import RadioRadPromoteEpisode from './RadioRadPromoteEpisode';
 import RadioPodcastH from './RadioPodcastH';
 import RadioLivestream from './RadioLivestream';
 import Loading from '~/components/load/Loading/Loading';
+import { Helmet } from 'react-helmet';
 
 function Radio() {
     const dispatch = useDispatch();
@@ -26,6 +27,9 @@ function Radio() {
 
     return data?.length > 0 ? (
         <>
+            <Helmet>
+                <title>Radio | Xem bài hát, album, MV đang hot nhất hiện tại</title>
+            </Helmet>
             {data?.map((i) =>
                 i?.sectionType === 'livestream' ? (
                     <RadioLivestream key={uuidv4()} data={i} />

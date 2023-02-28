@@ -1,12 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import className from 'classnames/bind';
-import { v4 as uuidv4 } from 'uuid';
-import { GoogleAuthProvider, FacebookAuthProvider, EmailAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, FacebookAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { auth } from '~/firebasse/config';
 import { setCurrentUser, setOpenModalLogin } from '~/redux/action';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper';
 
 import toastMessage from '../toast';
 import style from './ModalLogin.module.scss';

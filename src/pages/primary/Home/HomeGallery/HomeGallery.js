@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import Button from '~/components/Button';
-import ButtonAction from '~/components/Button/ButtonAction';
 import style from './HomeGallery.module.scss';
 const cx = className.bind(style);
 
