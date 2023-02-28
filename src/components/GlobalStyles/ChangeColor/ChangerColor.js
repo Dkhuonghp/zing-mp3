@@ -41,6 +41,8 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#fe63da');
             document.documentElement.style.setProperty('--text-item-hover', '#fff');
             document.documentElement.style.setProperty('--player-bg', 'rgb(47,7,78)');
+            document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-chart','');
         }
         if (kq === 1) {
             document.documentElement.style.setProperty('--layout-bg', '#282828');
@@ -51,6 +53,8 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#c273ed');
             document.documentElement.style.setProperty('--player-bg', 'rgb(24,24,24)');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#2d2f32');
+            document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-chart','');
         }
         if (kq === 2) {
             document.documentElement.style.setProperty('--layout-bg', '#061C4F');
@@ -62,6 +66,8 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--text-item-hover', '#fff');
             document.documentElement.style.setProperty('--player-bg', 'rgb(6,22,65)');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#223c75');
+            document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-chart','');
         }
         if (kq === 8) {
             document.documentElement.style.setProperty('--layout-bg', '#767269');
@@ -73,6 +79,8 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#F59D22');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#726c5e');
+            document.documentElement.style.setProperty('--bg-blur','');
+            document.documentElement.style.setProperty('--bg-chart','');
             document.documentElement.style.setProperty(
                 '--linear-gradient-bg',
                 'linear-gradient(to bottom, #656156, #574f40)',
@@ -89,6 +97,14 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#c273ed');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#2a2a2a');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
         //! Tím
         if (kq === 10) {
@@ -101,6 +117,14 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#c273ed');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#2a203a');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
         //! Xanh Đậm
         if (kq === 11) {
@@ -113,6 +137,14 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#0daf94');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#1d2a49');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
         //! Xanh Biển
         if (kq === 12) {
@@ -125,6 +157,14 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#429eff');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#2b4162');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
         //! Xanh Lá
         if (kq === 13) {
@@ -137,6 +177,14 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#0daf94');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#24503f');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
         //! Nâu
         if (kq === 14) {
@@ -149,6 +197,14 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#e96f16');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#604a45');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
         //! Hồng
         if (kq === 15) {
@@ -161,6 +217,14 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#e9638f');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#883c6c');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
         //! Đỏ
         if (kq === 16) {
@@ -173,6 +237,14 @@ const ChangerColor = ({ children }) => {
             document.documentElement.style.setProperty('--link-text-hover', '#f2636f');
             document.documentElement.style.setProperty('--main-box-shadow', '#4242421a');
             document.documentElement.style.setProperty('--queue-player-popup-bg', '#561111');
+            document.documentElement.style.setProperty(
+                '--bg-blur',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/new-release-bg.73d8f976.jpg)'
+            );
+            document.documentElement.style.setProperty(
+                '--bg-chart',
+                'url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/bg-chart.fd766403.jpg)'
+            );
         }
     } else {
         document.documentElement.style.setProperty('--navigation-text', '#32323d');

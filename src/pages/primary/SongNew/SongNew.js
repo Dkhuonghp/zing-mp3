@@ -20,6 +20,9 @@ function SongNew() {
     }, []);
     return data?.length !== 0 ? (
         <div>
+            <div className={cx('bg-blur')}></div>
+            <div className={cx('bg-alpha')}></div>
+            <div className={cx('bg-alpha-1')}></div>
             <div className={cx('top')}>
                 <h1>{data.title}</h1>
                 <Button noContent iconLeft={<i className="icon ic-play"></i>} className={cx('btn')} />

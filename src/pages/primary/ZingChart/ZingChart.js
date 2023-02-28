@@ -37,6 +37,9 @@ function ZingChart() {
     const data = useSelector((state) => state.dataZingChart.dataZingChart);
     return data?.length !== 0 ? (
         <div className={cx('wrapper')}>
+            <div className={cx('bg-blur')}></div>
+            <div className={cx('bg-alpha')}></div>
+            <div className={cx('bg-alpha-1')}></div>
             <div className={cx('top')}>
                 <h1>#zingchart</h1>
                 <Button

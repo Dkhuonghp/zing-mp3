@@ -1,4 +1,28 @@
+.bg-blur, .bg-alpha, .bg-alpha-1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 380px;
+    z-index: 0;
+}
+.bg-blur {
+    position: absolute;
+    background: var(--bg-blur) top/cover no-repeat;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+.bg-alpha {
+
+    background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg));
+}
+.bg-alpha-1 {
+    background-image: linear-gradient(180deg,var(--layout-bg),var(--layout-bg));
+    opacity: .8;
+}
 .top {
+    position: relative;
     display: flex;
     padding-top: 50px;
     align-items: center;
