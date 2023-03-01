@@ -115,6 +115,26 @@
                 color: var(--text-secondary);
             }
         }
+        .bottom-content {
+            position: relative;
+            top: 55px;
+            display: flex;
+            justify-content: center;
+            width: 400px;
+            margin: auto;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            .title {
+                color: var(--text-primary);
+            }
+            .artist {
+                color: var(--text-secondary);
+                margin-left: 4px;
+            }
+        }
     }
     .background {
         position: fixed;

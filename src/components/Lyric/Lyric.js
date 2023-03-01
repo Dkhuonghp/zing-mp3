@@ -31,7 +31,6 @@ function Lyric() {
     const dispatch = useDispatch();
     const { idAudio, activePlay } = useSelector((state) => state.dataControl);
     const { openLyric } = useSelector((state) => state.action);
-
     useEffect(() => {
         const api = async () => {
             const data = await getLyric(idAudio?.encodeId);
@@ -255,6 +254,10 @@ function Lyric() {
                         ) : (
                             <div className={cx('upload')}>Đang cập nhật</div>
                         )}
+                    </div>
+                    <div className={cx('bottom-content')}>
+                        <span className={cx('title')}>{idAudio?.title} -</span>
+                        <span className={cx('artist')}>{idAudio?.artistsNames}</span>
                     </div>
                 </div>
             </div>

@@ -39,6 +39,60 @@
     }
 }
 
+.zing-chart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .zing-chart-top {
+        margin-top: 2rem;
+        padding: 0.6rem 1rem;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.07);
+        .rank-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2.4px;
+            .rank-box {
+                width: 2.8rem;
+                height: 1.4rem;
+                border-radius: 2.4px;
+                margin-right: 0.6rem;
+            }
+            &:nth-child(2) {
+                margin: 0 3rem;
+            }
+            &:nth-child(1) .rank-box {
+                background: #4A90E2;
+            }
+            &:nth-child(2) .rank-box {
+                background: #27BD9C;
+            }
+            &:nth-child(3) .rank-box {
+                background: #A64250;
+            }
+            p {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: var(--text-primary);
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                height: auto;
+                overflow: hidden;
+            }
+        }
+    }
+    #myChart {
+        margin-bottom: 4rem;
+        max-height: 360px !important;
+    }
+}
 .title {
     font-size: 4rem;
     font-weight: 700;
@@ -92,6 +146,16 @@
         .wrapper {
             .header {
                 margin-left: 20px;
+            }
+        }
+    }
+    .zing-chart {
+        align-items: self-start;
+        .zing-chart-top {
+            flex-direction: column;
+            align-items: flex-start;
+            .rank-item:nth-child(2) {
+                margin: 0 !important;
             }
         }
     }

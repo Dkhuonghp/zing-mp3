@@ -104,6 +104,7 @@ function ControlMain() {
                     content={shuffle ? 'Tắt phát ngẫu nhiên' : 'Bật phát ngẫu nhiên'}
                     iconLeft={<i className="icon ic-shuffle"></i>}
                 />
+                {/* Prev Song Button */}
                 <Button
                     disable={listMusic?.length === 1}
                     onClick={() => {
@@ -131,6 +132,7 @@ function ControlMain() {
                         )
                     }
                 />
+                {/* Next Song Button */}
                 <Button
                     disable={listMusic?.length === 1}
                     onClick={() => {

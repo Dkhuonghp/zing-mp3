@@ -13,6 +13,7 @@ import Loading from '~/components/load/Loading/Loading';
 import ContainerSongs from '~/components/container/ContainerSongs';
 import { setCurrentIndex, setPlayListAudio } from '~/redux/dataControl';
 import { Helmet } from 'react-helmet';
+import ChartHome from './ChartHome';
 const cx = className.bind(style);
 
 function ZingChart() {
@@ -25,7 +26,8 @@ function ZingChart() {
         };
         chartApi();
     }, []);
-
+    
+    
     const handleClickPlay = () => {
         dispatch(setPlayListAudio(data?.RTChart?.items));
         if (data?.length > 0) {
@@ -34,8 +36,13 @@ function ZingChart() {
             dispatch(setCurrentIndex(Math.floor(Math.random() * 9)));
         }
     };
-
+    
     const data = useSelector((state) => state.dataZingChart.dataZingChart);
+    console.log(data);
+    const rank1 = data?.RTChart?.items[0].title
+    const rank2 = data?.RTChart?.items[1].title
+    const rank3 = data?.RTChart?.items[2].title
+    
     return data?.length !== 0 ? (
         <>
             <Helmet>
@@ -53,6 +60,23 @@ function ZingChart() {
                         className={cx('btn')}
                         onClick={handleClickPlay}
                     />
+                </div>
+                <div className={cx('zing-chart')}>
+                    <div className={cx('zing-chart-top')}>
+                        <div className={cx('rank-item')}>
+                            <div className={cx('rank-box')}></div>
+                            <p>{rank1}</p>
+                        </div>
+                        <div className={cx('rank-item')}>
+                            <div className={cx('rank-box')}></div>
+                            <p>{rank2}</p>
+                        </div>
+                        <div className={cx('rank-item')}>
+                            <div className={cx('rank-box')}></div>    
+                            <p>{rank3}</p>
+                        </div>
+                    </div>
+                    <ChartHome id={cx('myChart')}></ChartHome>
                 </div>
                 <div>
                     <Container>
