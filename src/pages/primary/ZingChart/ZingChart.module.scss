@@ -15,10 +15,10 @@
 }
 .bg-alpha {
 
-    background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 37%,var(--layout-bg));
+    background-image: var(--bg-alpha);
 }
 .bg-alpha-1 {
-    background-image: linear-gradient(180deg,var(--layout-bg),var(--layout-bg));
+    background-image: var(--bg-alpha-1);
     opacity: .8;
 }
 
